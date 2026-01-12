@@ -1,22 +1,28 @@
-<!DOCTYPE html><html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quintal do Hulk — Cardápio & Divulgações</title>
-  <meta name="description" content="Cardápio, divulgações e história do Quintal do Hulk." />  <!-- Open Graph (preview no WhatsApp/Instagram) -->  <meta property="og:title" content="Quintal do Hulk" />
-  <meta property="og:description" content="Cardápio, divulgações e a nossa história." />
+  <title>Quintal do Hulk — Cardápio, Eventos e Happy Hour</title>
+  <meta name="description" content="Quintal do Hulk: cardápio, divulgações, eventos e nossa história. Vila Progredior — São Paulo/SP." />
+
+  <!-- Open Graph (preview no WhatsApp/Instagram) -->
+  <meta property="og:title" content="Quintal do Hulk" />
+  <meta property="og:description" content="Cardápio, divulgações, eventos e a nossa história." />
   <meta property="og:type" content="website" />
-  <!-- Dica: depois você troca a imagem abaixo por uma do seu negócio (URL pública) -->
-  <meta property="og:image" content="https://images.unsplash.com/photo-1550547660-d9450f859349?w=1200&q=80&auto=format&fit=crop" />  <style>
+  <!-- Troque por uma imagem real do Quintal (URL pública), quando tiver -->
+  <meta property="og:image" content="https://images.unsplash.com/photo-1550547660-d9450f859349?w=1200&q=80&auto=format&fit=crop" />
+
+  <style>
     :root{
       --bg:#0b0f14;
       --bg2:#0b1220;
-      --card: rgba(17,24,39,.70);
+      --card: rgba(17,24,39,.72);
       --stroke: rgba(255,255,255,.10);
       --text:#e5e7eb;
       --muted:#a3aab6;
-      --accent:#22c55e;
-      --accent2:#60a5fa;
+      --accent:#22c55e;   /* verde Hulk */
+      --accent2:#fbbf24;  /* dourado quente */
       --radius: 18px;
     }
 
@@ -26,15 +32,15 @@
       margin:0;
       font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial;
       color:var(--text);
-      background: radial-gradient(900px 500px at 15% 10%, rgba(34,197,94,.18), transparent 55%),
-                  radial-gradient(900px 500px at 85% 10%, rgba(96,165,250,.16), transparent 55%),
-                  linear-gradient(120deg, var(--bg), var(--bg2));
+      background:
+        radial-gradient(900px 520px at 12% 8%, rgba(34,197,94,.18), transparent 55%),
+        radial-gradient(900px 520px at 88% 10%, rgba(251,191,36,.14), transparent 55%),
+        linear-gradient(120deg, var(--bg), var(--bg2));
     }
 
     a{color:inherit;text-decoration:none}
     .wrap{max-width:1100px;margin:0 auto;padding:18px}
 
-    /* Header */
     header{
       position:sticky;
       top:0;
@@ -48,7 +54,7 @@
     .brand{display:flex;align-items:center;gap:10px;min-width:160px}
     .logo{
       width:38px;height:38px;border-radius:12px;
-      background: linear-gradient(135deg, rgba(34,197,94,.95), rgba(96,165,250,.85));
+      background: linear-gradient(135deg, rgba(34,197,94,.95), rgba(251,191,36,.85));
       box-shadow: 0 10px 30px rgba(0,0,0,.25);
     }
     .brand b{letter-spacing:.3px}
@@ -58,394 +64,4 @@
       display:inline-flex;align-items:center;justify-content:center;gap:8px;
       padding:10px 14px;border-radius:999px;
       border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-    }
-    .pill:hover{border-color: rgba(255,255,255,.22)}
-
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:8px;
-      padding:11px 14px;border-radius:12px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.03);
-      cursor:pointer;
-      font-weight:650;
-    }
-
-    .btn.primary{
-      background: var(--accent);
-      border-color: transparent;
-      color:#04190b;
-    }
-
-    .btn.primary:hover{filter:brightness(1.03)}
-
-    /* Hero */
-    .hero{padding:56px 0 22px}
-    .grid{display:grid;grid-template-columns: 1.1fr .9fr;gap:18px;align-items:stretch}
-
-    .h1{font-size: clamp(30px, 4.2vw, 48px);line-height:1.05;letter-spacing:-.6px}
-    .lead{margin-top:12px;color:var(--muted);line-height:1.65;font-size:16px}
-
-    .hero-actions{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
-
-    .card{
-      background: var(--card);
-      border:1px solid rgba(255,255,255,.08);
-      border-radius: var(--radius);
-      padding:18px;
-      box-shadow: 0 18px 70px rgba(0,0,0,.35);
-    }
-
-    .kpis{display:grid;grid-template-columns: repeat(3, 1fr);gap:12px;margin-top:16px}
-    .kpi{
-      padding:14px;border-radius:16px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.06);
-    }
-    .kpi b{display:block;font-size:18px}
-    .kpi span{color:var(--muted)}
-
-    .media{
-      height:100%;
-      min-height: 310px;
-      border-radius: var(--radius);
-      border:1px solid rgba(255,255,255,.10);
-      overflow:hidden;
-      position:relative;
-      background:
-        radial-gradient(800px 320px at 30% 20%, rgba(34,197,94,.18), transparent 55%),
-        radial-gradient(800px 320px at 80% 20%, rgba(96,165,250,.16), transparent 55%),
-        linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-    }
-
-    .media::after{
-      content:"";
-      position:absolute;inset:0;
-      background-image:url("https://images.unsplash.com/photo-1550547660-d9450f859349?w=1400&q=80&auto=format&fit=crop");
-      background-size:cover;
-      background-position:center;
-      filter:saturate(1.05) contrast(1.02);
-      opacity:.55;
-    }
-
-    .media .badge{
-      position:absolute;left:16px;top:16px;z-index:2;
-      padding:10px 12px;border-radius:999px;
-      background: rgba(11,15,20,.55);
-      border:1px solid rgba(255,255,255,.12);
-      backdrop-filter: blur(8px);
-      display:inline-flex;gap:8px;align-items:center;
-    }
-    .dot{width:10px;height:10px;border-radius:50%;background: var(--accent);box-shadow:0 0 18px rgba(34,197,94,.55)}
-
-    /* Sections */
-    section{padding:30px 0}
-    .section-title{font-size:22px;margin:0 0 12px}
-    .section-sub{margin:0 0 18px;color:var(--muted);line-height:1.6}
-
-    .two{display:grid;grid-template-columns: 1fr 1fr;gap:14px}
-
-    /* Promo cards */
-    .promo-grid{display:grid;grid-template-columns: repeat(3, 1fr);gap:14px}
-
-    .promo{
-      display:flex;flex-direction:column;gap:10px;
-      padding:16px;
-      border-radius: var(--radius);
-      border:1px solid rgba(255,255,255,.08);
-      background: rgba(255,255,255,.03);
-    }
-    .promo h3{margin:0;font-size:16px}
-    .promo p{margin:0;color:var(--muted);line-height:1.55}
-    .tag{
-      align-self:flex-start;
-      padding:6px 10px;border-radius:999px;
-      background: rgba(34,197,94,.14);
-      border:1px solid rgba(34,197,94,.22);
-      color: #b7f7cb;
-      font-size:12px;
-      font-weight:650;
-    }
-
-    /* Menu Embed */
-    .embed{
-      width:100%;
-      height: 740px;
-      border-radius: var(--radius);
-      border:1px solid rgba(255,255,255,.10);
-      overflow:hidden;
-      background: rgba(0,0,0,.12);
-    }
-
-    /* Contact */
-    .field{display:grid;gap:10px;margin-top:12px}
-    input, textarea{
-      width:100%;
-      padding:12px 12px;
-      border-radius:12px;
-      background: rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.12);
-      color: var(--text);
-      outline: none;
-    }
-    textarea{min-height:110px;resize:vertical}
-
-    footer{
-      padding:26px 0;
-      margin-top:22px;
-      color: var(--muted);
-      border-top: 1px solid rgba(255,255,255,.06);
-    }
-
-    /* Responsive */
-    @media (max-width: 980px){
-      .grid{grid-template-columns: 1fr}
-      .kpis{grid-template-columns: 1fr}
-      .two{grid-template-columns: 1fr}
-      .promo-grid{grid-template-columns: 1fr}
-      .embed{height: 820px}
-      .brand{min-width:auto}
-    }
-  </style></head>
-<body>
-  <header>
-    <div class="wrap">
-      <div class="nav">
-        <div class="brand">
-          <div class="logo" aria-hidden="true"></div>
-          <div>
-            <b>Quintal do Hulk</b>
-            <div style="color:var(--muted);font-size:12px;line-height:1.2">Cardápio • Divulgações • Contato</div>
-          </div>
-        </div><nav class="menu" aria-label="Menu principal">
-      <a class="pill" href="#cardapio">Cardápio</a>
-      <a class="pill" href="#divulgacoes">Divulgações</a>
-      <a class="pill" href="#historia">Nossa história</a>
-      <a class="pill" href="https://linktr.ee/quintaldohulk" target="_blank" rel="noreferrer">Link na bio</a>
-      <a class="pill" href="#contato">Contato</a>
-      <a class="btn primary" id="btnWhats" href="https://wa.me/5511915817973" target="_blank" rel="noreferrer">WhatsApp</a>
-    </nav>
-  </div>
-</div>
-
-  </header>  <main class="wrap">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="grid">
-        <div class="card">
-          <div class="h1">Comida boa, clima de quintal — do jeito que a gente gosta.</div>
-          <p class="lead">Aqui você encontra o cardápio atualizado, nossas divulgações (promoções/eventos) e um pouco da história de como nasceu o Quintal do Hulk.</p><div class="hero-actions">
-        <a class="btn primary" href="#cardapio">Ver cardápio agora</a>
-        <a class="btn" href="#divulgacoes">Ver divulgações</a>
-        <a class="btn" href="#contato">Fazer pedido / reserva</a>
-      </div>
-
-      <div class="kpis">
-        <div class="kpi"><b>Delivery</b><span>peça no WhatsApp</span></div>
-        <div class="kpi"><b>Promoções</b><span>toda semana</span></div>
-        <div class="kpi"><b>Eventos</b><span>aniversários & confraternizações</span></div>
-      </div>
-    </div>
-
-    <div class="media" role="img" aria-label="Foto ilustrativa de hamburguer e batata">
-      <div class="badge"><span class="dot" aria-hidden="true"></span><span style="color:var(--text);font-weight:700">Aberto para pedidos</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- CARDÁPIO -->
-<section id="cardapio">
-  <h2 class="section-title">Cardápio</h2>
-  <p class="section-sub">Este é o cardápio atual (DGuests). Se o embed não abrir no seu navegador, use o botão “Abrir cardápio”.</p>
-
-  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px">
-    <a class="btn primary" href="https://www.dguests.com.br/cardapio/Quintaldohulk" target="_blank" rel="noreferrer">Abrir cardápio</a>
-    <button class="btn" type="button" onclick="copiarLinkCardapio()">Copiar link do cardápio</button>
-  </div>
-
-  <iframe class="embed" title="Cardápio Quintal do Hulk" src="https://www.dguests.com.br/cardapio/Quintaldohulk" loading="lazy"></iframe>
-</section>
-
-<!-- DIVULGAÇÕES -->
-<section id="divulgacoes">
-  <h2 class="section-title">Divulgações</h2>
-  <p class="section-sub">Promoções, eventos e recados importantes. (Você consegue trocar isso fácil, editando a lista no final do arquivo.)</p>
-
-  <div id="promoGrid" class="promo-grid"></div>
-</section>
-
-<!-- HISTÓRIA -->
-<section id="historia">
-  <h2 class="section-title">Como começou o Quintal do Hulk</h2>
-  <p class="section-sub">Desde 2022 (ano da Copa do Mundo), construindo um lugar com clima de quintal de casa — do jeito que a gente gosta.</p>
-
-  <div class="two">
-    <div class="card">
-      <h3 style="margin:0 0 8px">Nossa essência</h3>
-      <p style="margin:0;color:var(--muted);line-height:1.75">
-        O <b style="color:var(--text)">Quintal do Hulk</b> nasceu em <b style="color:var(--text)">2022</b>, no ano da Copa do Mundo, a partir de um sonho simples e verdadeiro:
-        criar um restaurante com <b style="color:var(--text)">paisagem</b>, clima leve e aquela sensação gostosa de <b style="color:var(--text)">quintal de casa</b>.
-        A ideia surgiu dentro das autoescolas, junto com o desejo do patrão de transformar esse sonho em um espaço onde todos se sentissem à vontade.
-      </p>
-      <p style="margin:12px 0 0;color:var(--muted);line-height:1.75">
-        Desde o início, o propósito foi claro: <b style="color:var(--text)">atender a todos os públicos</b>. No começo, a casa vivia cheia e,
-        como todo projeto que nasce com o coração, a gente apanhou bastante para entender o ritmo e os desafios do mundo da gastronomia.
-        Foi errando, ajustando e aprendendo no dia a dia que o Quintal ganhou identidade, padrão e personalidade.
-      </p>
-      <p style="margin:12px 0 0;color:var(--muted);line-height:1.75">
-        Hoje, o Quintal do Hulk se tornou referência como <b style="color:var(--text)">o melhor lugar para festas de aniversário</b>,
-        <b style="color:var(--text)">eventos corporativos</b> e aquele <b style="color:var(--text)">happy hour de fim de tarde</b>
-        que reúne amigos, família e boas conversas. Mais do que um restaurante, o Quintal virou um ponto de encontro.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3 style="margin:0 0 8px">O que o Quintal virou hoje</h3>
-      <ul style="margin:0;padding-left:18px;color:var(--muted);line-height:1.9">
-        <li>Um dos melhores lugares para <b style="color:var(--text)">festa de aniversário</b>.</li>
-        <li>Estrutura e experiência para <b style="color:var(--text)">eventos corporativos</b>.</li>
-        <li>O ponto certo do <b style="color:var(--text)">fim de tarde</b> para um <b style="color:var(--text)">happy hour</b> com clima de quintal.</li>
-        <li>Cardápio em evolução e atendimento pensado para receber bem qualquer público.</li>
-      </ul>
-      <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
-        <a class="btn" href="#contato">Falar com a gente</a>
-        <a class="btn" href="#cardapio">Ver cardápio</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTATO -->
-<section id="contato">
-  <h2 class="section-title">Contato</h2>
-  <p class="section-sub">Preencha e envie direto no WhatsApp.</p>
-
-  <div class="two">
-    <div class="card">
-      <h3 style="margin:0 0 8px">Mensagem rápida</h3>
-      <div class="field">
-        <input id="nome" placeholder="Seu nome" />
-        <input id="tel" placeholder="Telefone" />
-        <textarea id="msg" placeholder="Mensagem (pedido, reserva, dúvida...)" ></textarea>
-        <button class="btn primary" type="button" onclick="enviarWhats()">Enviar no WhatsApp</button>
-      </div>
-      <p style="margin:12px 0 0;color:var(--muted);font-size:13px;line-height:1.5">
-        * Troque o número do WhatsApp no código: procure por <b>55SEUNUMERO</b>.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3 style="margin:0 0 8px">Redes & localização</h3>
-      <p style="margin:0;color:var(--muted);line-height:1.7">
-        Instagram: <a class="pill" href="https://linktr.ee/quintaldohulk" target="_blank" rel="noreferrer">@quintaldohulk</a><br/>
-        Endereço: <span style="color:var(--text)">Lício Marcondes do Amaral, nº 51 — Vila Progredior, São Paulo/SP</span><br/>
-        Horário: <span style="color:var(--text)">Seg: fechado • Ter: 12h às 15h30 • Qua a Sáb: 12h às 00h • Dom: 12h às 20h</span>
-      </p>
-      <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
-        <a class="btn" href="https://linktr.ee/quintaldohulk" target="_blank" rel="noreferrer">Link na bio</a>
-        <a class="btn" href="https://maps.google.com" target="_blank" rel="noreferrer">Abrir no Maps</a>
-        <a class="btn" href="https://www.dguests.com.br/cardapio/Quintaldohulk" target="_blank" rel="noreferrer">Cardápio</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  © <span id="ano"></span> Quintal do Hulk — Todos os direitos reservados.
-</footer>
-
-  </main>  <script>
-    // ====== CONFIGURAÇÕES RÁPIDAS ======
-    // 1) Troque o WhatsApp aqui (sem espaços e sem +). Ex.: 5511999999999
-    const WHATSAPP_NUMERO = "5511915817973";
-
-    // 2) Divulgações: edite esta lista (título, descrição e tag)
-    const DIVULGACOES = [
-      {
-        tag: "DESTAQUE",
-        titulo: "Happy Hour no Quintal",
-        descricao: "O melhor fim de tarde para relaxar com comida boa, bebida gelada e clima de quintal.",
-      },
-      {
-        tag: "EVENTOS",
-        titulo: "Aniversários & Corporativo",
-        descricao: "Estrutura completa para festas de aniversário e eventos corporativos.",
-      },
-      {
-        tag: "HORÁRIO",
-        titulo: "Funcionamento",
-        descricao: "Terça: 12h–15h30 | Qua a Sáb: 12h–00h | Domingo: 12h–20h",
-      },
-
-      // Edite ou adicione novos cards abaixo
-
-      {
-        tag: "PROMO",
-        titulo: "Promo da Semana",
-        descricao: "Escreva aqui a oferta (ex.: combo, desconto, frete grátis em bairros X).",
-      },
-      {
-        tag: "EVENTO",
-        titulo: "Confraternizações",
-        descricao: "Reservas para aniversários e eventos. Monte seu pacote com a gente.",
-      },
-      {
-        tag: "AVISO",
-        titulo: "Horário Especial",
-        descricao: "Informe feriados, dias de manutenção, ou mudanças no atendimento.",
-      },
-    ];
-
-    // ====== LÓGICA ======
-    document.getElementById("ano").textContent = new Date().getFullYear();
-
-    // Atualiza links do WhatsApp
-    const btnWhats = document.getElementById("btnWhats");
-    if (btnWhats) btnWhats.href = `https://wa.me/${WHATSAPP_NUMERO}`;
-
-    // Renderiza divulgações
-    const promoGrid = document.getElementById("promoGrid");
-    promoGrid.innerHTML = DIVULGACOES.map((p) => {
-      return `
-        <article class="promo">
-          <span class="tag">${escapeHtml(p.tag)}</span>
-          <h3>${escapeHtml(p.titulo)}</h3>
-          <p>${escapeHtml(p.descricao)}</p>
-          <div style="margin-top:auto;display:flex;gap:10px;flex-wrap:wrap">
-            <a class="btn" href="#contato">Quero saber mais</a>
-            <a class="btn" href="#cardapio">Ver cardápio</a>
-          </div>
-        </article>
-      `;
-    }).join("");
-
-    function enviarWhats(){
-      const nome = document.getElementById("nome").value.trim();
-      const tel = document.getElementById("tel").value.trim();
-      const msg = document.getElementById("msg").value.trim();
-
-      const texto = `Olá! Meu nome é ${nome || "(não informado)"}.\nTelefone: ${tel || "(não informado)"}\n\n${msg || "Quero informações."}`;
-      const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(texto)}`;
-      window.open(url, "_blank");
-    }
-
-    function copiarLinkCardapio(){
-      const link = "https://www.dguests.com.br/cardapio/Quintaldohulk";
-      navigator.clipboard?.writeText(link).then(() => {
-        alert("Link do cardápio copiado!");
-      }).catch(() => {
-        prompt("Copie o link:", link);
-      });
-    }
-
-    // Escape simples para evitar quebrar HTML ao editar textos
-    function escapeHtml(str){
-      return String(str)
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-    }
-  </script></body>
-</html>
+      background: rgba
